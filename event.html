@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events Menopulation</title>
+</head>
+
+<body>
+    <h3>Events Handling</h3>
+    <button onclick="clickHandler()">White</button>
+    <button id="body-color">Sky Blue</button>
+    <button id="text-color">Text Color Red</button>
+    <button id="text-color-b">Text Color Black</button>
+    <script>
+        function textColor() {
+            document.body.style.color = 'red';
+        }
+        function clickHandler() {
+            document.body.style.backgroundColor = 'white';
+        }
+        function colorChangeSkyblue() {
+            document.body.style.backgroundColor = 'skyblue';
+        }
+        const bodyColorChange = document.getElementById('body-color');
+        bodyColorChange.onclick = colorChangeSkyblue;
+
+        const thirdButton = document.getElementById('text-color');
+        thirdButton.addEventListener('click', textColor);
+
+        document.getElementById('text-color-b').addEventListener('click', function () { //Anonymous Functions
+            document.body.style.color = 'black';
+        })
+    </script>
+</body>
+
+</html>
